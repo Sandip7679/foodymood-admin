@@ -40,3 +40,11 @@
         width: 40px;
     }
 }
+.no-order{
+   /* margin-top: 200px;
+   margin-left: 48%; */
+   display: flex;
+   height: 50vh;
+   align-items: center;
+   justify-content: center;
+}
