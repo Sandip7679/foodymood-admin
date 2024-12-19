@@ -33,3 +33,72 @@
     color: white;
     cursor: pointer;
 }
+/* .button-text {
+    display: inline-block;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  } */
+  
+/* Button styling */
+.add-btn {
+    position: relative;
+    /* padding: 10px 20px; */
+    /* font-size: 16px; */
+    /* cursor: pointer; */
+    /* border: none; */
+    /* background-color: black; */
+    /* color: white; */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    outline: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Button text */
+  .button-text {
+    display: inline-block;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+
+
+  /* Loader styling */
+  .loader {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border: 2px solid transparent;
+    border-top-color: white;
+    border-left-color: white;
+    border-right-color: white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    opacity: 0;
+  }
+  
+  /* Spinner animation */
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Disabled state */
+  .add-btn[disabled] {
+    background-color: #494545;
+    cursor: not-allowed;
+  }
+  
+  /* Loader and button-text visibility when disabled */
+  .add-btn[disabled] .loader {
+    opacity: 1;
+  }
+  
+  .add-btn[disabled] .button-text {
+    opacity: 0;
+  }
