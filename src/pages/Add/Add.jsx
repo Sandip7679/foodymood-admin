@@ -31,7 +31,6 @@ const Add = () => {
     console.log("formdata...", formData);
     const response = await axios.post(`${url}/api/food/add`, formData);
     console.log("response for food add...", response);
-    setIsLoading(true);
     if (response.data.success) {
       toast.success(response.data.message);
       setData({
@@ -44,6 +43,8 @@ const Add = () => {
     } else {
       toast.error(response.data.message);
     }
+
+    setIsLoading(false);
   };
 
   const onChangeHandler = (event) => {
