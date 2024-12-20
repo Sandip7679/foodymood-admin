@@ -1,16 +1,22 @@
 import React, { useState } from "react";
 import "./Sidebar.css";
 import { assets } from "../../assets/assets";
-import { NavLink } from "react-router-dom";
+import { NavLink,useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 const Sidebar = () => {
   const [currItem, setCurrItem] = useState("add");
+  const location = useLocation();
+
+  useEffect(()=>{
+    console.log('location...',location)
+  },[])
   return (
     <div className="sidebar">
       <div className="sidebar-options">
         <NavLink
           to="/add"
-          className={`sidebar-option`}
+          className={`sidebar-option ${location.pathname == '/'?"active":""}`}
           // onClick={() => setCurrItem("add")}
         >
           <img src={assets.add_icon} alt="" />
