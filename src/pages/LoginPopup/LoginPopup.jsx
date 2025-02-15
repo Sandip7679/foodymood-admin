@@ -38,10 +38,11 @@ const LoginPopup = ({ setShowLogin }) => {
     // new_url += "/api/user/login";
     const response = await axios.post(new_url, data);
     if (response.data.success) {
-      setToken(response.data.token);
+      // setToken(response.data.token);
       localStorage.setItem("token", response.data.token);
       // loadCartData({ token: response.data.token });
       setShowLogin(false);
+      toast.success('Logged in successfully!');
     } else {
       toast.error(response.data.message);
     }
