@@ -124,8 +124,8 @@ const Add = () => {
           </div>
         </div>
         <button type="submit" className="add-btn" disabled={isLoading}>
-          <span class="button-text">ADD</span>
-          <span class="loader"></span>
+          <span className="button-text">ADD</span>
+          <span className="loader"></span>
         </button>
       </form>
     </div>
